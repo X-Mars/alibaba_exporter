@@ -9,7 +9,7 @@ class Bss(Aliyun):
         self.metrics_list = []
 
     def get_aliyun_balance(self):
-        balance = 0
+        balance = '0'
         request = QueryAccountBalanceRequest.QueryAccountBalanceRequest()
         request.set_accept_format("JSON")
         result = self.clt.do_action_with_exception(request)
