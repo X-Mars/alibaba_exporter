@@ -17,7 +17,7 @@ class Bss(Aliyun):
         if result['Code'] == '200':
             balance = result['Data']['AvailableCashAmount']
 
-        info = 'aliyun_balance ' + str(balance)
+        info = 'aliyun_balance ' + balance.replace(',', '')
         print(info)
         self.metrics_list.append(info)
 
